@@ -1,5 +1,16 @@
 
-首先SSH屏蔽域名
+
+
+### Debian / Ubuntu 安装下载工具
+```bash
+apt update -y  && apt install -y curl
+```
+### CentOS 安装下载工具
+```bash
+yum update -y  && yum install -y curl
+```
+
+# 首先SSH屏蔽域名
 
 # 启动运行
 ## cdn.com修改为你安装路径一般就是域名
