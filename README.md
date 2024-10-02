@@ -9,6 +9,16 @@ apt update -y  && apt install -y curl
 ```bash
 yum update -y  && yum install -y curl
 ```
+# 宝塔安装debian系统：
+```bash
+apt install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh aapanel
+```
+# 宝塔安装centos系统：
+```bash
+yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh aapanel
+```
+
+
 
 # 首先SSH屏蔽域名
 
