@@ -1,0 +1,35 @@
+上传文件到/home'
+
+解压
+tar -xzvf /home/m3u8-app.tar.gz -C /home
+
+
+允许caddy访问/home/m3u8-app反代
+
+# 允许 caddy 进入 home 目录
+sudo chmod +x /home
+# 设置项目目录权限
+sudo chown -R caddy:caddy /home/m3u8-app
+sudo chmod -R 755 /home/m3u8-app
+
+
+下载caddy添加配置内容如下www.14.com替换你的域名
+
+
+www.14.com {
+    root * /home/m3u8-app
+    file_server
+    header Access-Control-Allow-Origin *
+}
+
+
+启动caddy
+
+# 检查配置语法
+caddy validate --config /etc/caddy/Caddyfile
+
+# 重启 Caddy
+sudo systemctl restart caddy
+
+# 查看运行状态
+sudo systemctl status caddy
